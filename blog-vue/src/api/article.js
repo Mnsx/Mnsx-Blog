@@ -42,5 +42,5 @@ export function updateViewCount(articleId) {
         },
         method: 'put'
     })
-    
+
 }

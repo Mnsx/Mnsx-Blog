@@ -11,12 +11,9 @@
           "
           alt=""
         />
-        <h1 v-if="this.$store.state.themeObj.user_start != 0">
-          <span>请别再呼唤我为孤独之人</span>
-        </h1>
       </div>
       <div class="r1-body">
-        <p>三更</p>
+        <p>Mnsx_x</p>
         <div class="catch-me">
           <div class="">
             <el-tooltip class="item" content="Github" placement="top">
@@ -32,18 +29,6 @@
             <el-tooltip
               class="item"
               effect="dark"
-              content="微博"
-              placement="top"
-            >
-              <a :href="catchMeObj.sina" target="_blank"
-                ><i class="fa fa-fw fa-weibo"></i
-              ></a>
-            </el-tooltip>
-          </div>
-          <div class="">
-            <el-tooltip
-              class="item"
-              effect="dark"
               content="微信"
               placement="top"
             >
@@ -54,10 +39,10 @@
             <el-tooltip
               class="item"
               effect="dark"
-              content="CSDN"
+              content="LeetCode"
               placement="top"
             >
-              <a :href="catchMeObj.csdn" target="_blank"><i class="">C</i></a>
+              <a :href="catchMeObj.leetcode" target="_blank"><i class="">LC</i></a>
             </el-tooltip>
           </div>
         </div>
@@ -80,28 +65,12 @@
       :class="gotoTop ? 'toTop hidden' : 'toTop goTop hidden'"
       @click="toTopfun"
     >
-      <img
-        :src="
-          this.$store.state.themeObj.right_img
-            ? this.$store.state.themeObj.right_img
-            : 'static/img/scroll.png'
-        "
-        alt=""
-      />
     </div>
     <div
       v-else
       :class="gotoTop ? 'toTophui hidden' : 'toTophui goTophui hidden'"
       @click="toTopfun"
     >
-      <img
-        :src="
-          this.$store.state.themeObj.right_img
-            ? this.$store.state.themeObj.right_img
-            : 'static/img/scroll.png'
-        "
-        alt=""
-      />
     </div>
   </div>
 </template>
@@ -121,12 +90,10 @@ export default {
       artCommentList: "", //最新评论
       catchMeObj: {
         //个人信息
-        git: "https://gitee.com",
+        git: "https://github.com/Mnsx",
         qq: "/static/img/qq.png",
-        sina: "https://weibo.com",
-        wechat: "/static/img/qq.jpg",
-        csdn: "http://www.csdn.cn",
-        job: "https://www.baidu.com",
+        wechat: "/static/img/wechat.jpg",
+        leetcode: "https://leetcode.cn/u/mnsx_x/",
       },
     };
   },
@@ -211,7 +178,7 @@ export default {
   /*box-shadow: inset 0 -70px 100px -50px rgba(0,0,0,.5);*/
 }
 .rightlistBox .r1-head img {
-  width: 100%;
+  width: 50%;
   min-height: 100px;
 }
 .rightlistBox .r1-head h1 {

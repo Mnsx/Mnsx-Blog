@@ -40,18 +40,60 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     redirect: '/dashboard',
-    children: [{
-      path: 'dashboard',
-      name: 'Dashboard',
-      component: () => import('@/views/dashboard/index'),
-      meta: { title: '首页', icon: 'dashboard' }
-    }]
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/dashboard/index'),
+        meta: { title: '首页', icon: 'dashboard' }
+      },
+      {
+        path: '/write',
+        component: () => import('@/views/content/article/write/index'),
+        hidden: true
+      },
+      {
+        path: '/content/category',
+        component: () => import('@/views/content/category/index'),
+        hidden: true
+      },
+      {
+        path: '/content/article',
+        component: () => import('@/views/content/article/index'),
+        hidden: true
+      },
+      {
+        path: '/content/tag',
+        component: () => import('@/views/content/tag/index'),
+        hidden: true
+      },
+      {
+        path: '/content/link',
+        component: () => import('@/views/content/link/index'),
+        hidden: true
+      },
+      {
+        path: '/system/user',
+        component: () => import('@/views/system/user/index'),
+        hidden: true
+      },
+      {
+        path: '/system/role',
+        component: () => import('@/views/system/role/index'),
+        hidden: true
+      },
+      {
+        path: '/system/menu',
+        component: () => import('@/views/system/menu/index'),
+        hidden: true
+      },
+    ]
   }
-  // {
-  //   path: '/write',
-  //   component: () => import('@/views/content/article/write/index'),
-  //   hidden: true
-  // }
+  /*{
+    path: '/write',
+    component: () => import('@/views/content/article/write/index'),
+    hidden: true
+  }*/
 ]
 
 const createRouter = () => new Router({
