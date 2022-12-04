@@ -28,7 +28,7 @@ import java.util.Objects;
  */
 @Service
 public class UploadServiceImpl implements UploadService {
-    private static final String  OSS_URL_PREFIX = "https://mnsx-blog.oss-cn-hangzhou.aliyuncs.com/";
+    private static final String  OSS_URL_PREFIX = "";
     @Autowired
     private OssProperties ossProperties;
 
